@@ -24,3 +24,5 @@ class Employee(ORM):
                 results = curs.fetchall()
                 print(results)
     
+    #unittest would create a new user for a new branch, save the user and then use the above to check if Equal the new branch that was added
+    
