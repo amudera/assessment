@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 arr = {'data': [[1,2,3],[4,5,6],[7,8,9]]}
 
-@app.route('/sum', methods=['GET'])
+@app.route('/sum', methods=['POST'])
 def root():
     arr2 = arr['data']
     vals = sum(map(sum,arr2)) 
@@ -19,10 +19,9 @@ def root():
 #     data = request.get_json()
 #     vals = data.get('data')
 #     sums = sum(map(sum,vals)) 
-#     return jsonify(sums)
+#     return jsonify('sums': sums)
 
-# curl localhost:5000/sum/ -d {'data': [[1,2,3],[4,5,6],[7,8,9]]}
-# curl -H "Content-Type: application/sum" -X POST -d '{'data': [[1,2,3],[4,5,6],[7,8,9]]}' http://127.0.0.1:5000/
+# curl localhost:5000/sum/ -d '{"data": [[1,2,3],[4,5,6],[7,8,9]]}'
 
 # @app.route("/sum", methods=["POST"])
 # def jsondata():

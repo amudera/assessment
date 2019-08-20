@@ -16,7 +16,6 @@ def query():
     pprint(results)
     quit()
 
-
 if __name__ == "__main__":
     update()
     query()
